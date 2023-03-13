@@ -1,0 +1,108 @@
+=============================================================================================================
+Endpoint: GET /api/users?page=2
+Deskripsi: Endpoint untuk mendapatkan daftar user pada aplikasi dengan paginasi
+Parameter: page - nomor halaman yang ingin diambil, integer
+Header: - 
+Response:
+- Status code: 200 OK
+- Content-Type: application/json
+- Body:
+  {
+    "page": 2,
+    "per_page": 6,
+    "total": 12,
+    "total_pages": 2,
+    "data": [
+      {
+        "id": 7,
+        "email": "michael.lawson@reqres.in",
+        "first_name": "Michael",
+        "last_name": "Lawson",
+        "avatar": "https://reqres.in/img/faces/7-image.jpg"
+      },
+      {
+        "id": 8,
+        "email": "lindsay.ferguson@reqres.in",
+        "first_name": "Lindsay",
+        "last_name": "Ferguson",
+        "avatar": "https://reqres.in/img/faces/8-image.jpg"
+      },
+      {
+        "id": 9,
+        "email": "tobias.funke@reqres.in",
+        "first_name": "Tobias",
+        "last_name": "Funke",
+        "avatar": "https://reqres.in/img/faces/9-image.jpg"
+      },
+      {
+        "id": 10,
+        "email": "byron.fields@reqres.in",
+        "first_name": "Byron",
+        "last_name": "Fields",
+        "avatar": "https://reqres.in/img/faces/10-image.jpg"
+      },
+      {
+        "id": 11,
+        "email": "george.edwards@reqres.in",
+        "first_name": "George",
+        "last_name": "Edwards",
+        "avatar": "https://reqres.in/img/faces/11-image.jpg"
+      },
+      {
+        "id": 12,
+        "email": "rachel.howell@reqres.in",
+        "first_name": "Rachel",
+        "last_name": "Howell",
+        "avatar": "https://reqres.in/img/faces/12-image.jpg"
+      }
+    ]
+  }
+
+=============================================================================================================
+Endpoint: POST /api/users
+Deskripsi: Endpoint untuk membuat user baru pada aplikasi
+Parameter: -
+Header: Content-Type: application/json
+Request Body:
+{
+"name": "Test User",
+"job": "Test Job"
+}
+Response:
+Status code: 201 Created
+Content-Type: application/json
+Body:
+
+{
+"name": "Test User",
+"job": "Test Job",
+"id": "103",
+"createdAt": "2023-03-13T12:34:56.000Z"
+}
+
+=============================================================================================================
+Endpoint: PUT /api/users/{user_id}
+Deskripsi: Endpoint untuk mengubah data user pada aplikasi
+Parameter: user_id - id user yang ingin diubah, integer
+Header: Content-Type: application/json
+Response:
+Status code: 200 OK
+Content-Type: application/json
+
+Body:
+{
+"name": "morpheus",
+"job": "zion resident",
+"updatedAt": "2022-03-13T10:15:32.227Z"
+}
+
+=============================================================================================================
+Endpoint: DELETE /api/users/2
+Deskripsi: Endpoint untuk menghapus user dengan id 2 pada aplikasi
+Parameter: -
+Header: -
+Response:
+
+Status code: 204 No Content
+Content-Type: -
+Body: -
