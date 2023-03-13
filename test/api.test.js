@@ -83,7 +83,7 @@ describe('ReqRes API Contract Tests', () => {
         .send(user)
         .expect(201);
 
-      // Delete the user
+      // Delete the userr
       const deleteRes = await request(app)
         .delete(`/users/${createRes.body.id}`)
         .expect(204);
